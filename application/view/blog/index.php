@@ -1,20 +1,20 @@
 <div class="container normal-page sliderhome">
-	<div class="row">
-		<div class="span12">
-			<?php $this->renderFeedbackMessages(); ?>
-			<div class="template-wrapper">
-				<div class="block span8 first cf">
-					<div id="block-2" class="block block-news_blog_style_block span8 first cf">
+			<div class="row">
+				<div class="span12">
+				<?php $this->renderFeedbackMessages(); ?>
+					<div class="template-wrapper">
+						<div class="block span8 first cf">
+							<div id="block-2" class="block block-news_blog_style_block span8 first cf">
 
-						<?php foreach ($this->blog_posts as $blog_post) { ?>
-						<div class="blog-post">
+								<?php foreach ($this->blog_posts as $blog_post) { ?>
+									<div class="blog-post">
 
-							<div class="blog-image">
-								<a href="blog-post.html"><img src="./img/defaults/817x320.jpg"></a>
-								<div class="blog-date">
-									<span class="date"><?= date("d M",strtotime($blog_post->created_on)); ?><!-- Jun<br>17 --></span>
-									<!-- <div class="plove"><a href="#" class="heart-love" id="heart-love-499" title="Love this"><span class="heart-love-count"><span class="icon-heart"></span>54</span></a></div> -->
-								</div>
+									<div class="blog-image">
+										<a href="blog-post.html"><img src="./img/defaults/817x320.jpg"></a>
+										<div class="blog-date">
+											<span class="date"><?= date("d M",strtotime($blog_post->created_on)); ?><!-- Jun<br>17 --></span>
+											<!-- <div class="plove"><a href="#" class="heart-love" id="heart-love-499" title="Love this"><span class="heart-love-count"><span class="icon-heart"></span>54</span></a></div> -->
+										</div>
 <!-- 										<div class="blog-rating">
 											<div class="overall-score">
 												<div class="rating r-45"></div>
@@ -44,7 +44,7 @@
 								<!-- /.blog-post -->
 								<?php } ?>
 								
-
+							
 
 <!-- 								<div class="pagination">
 									<ul>
