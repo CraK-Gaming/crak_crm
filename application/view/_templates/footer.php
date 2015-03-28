@@ -1,7 +1,7 @@
 		<footer>
 			<div class="container">
 				<div class="span12">
-					<div class="first footer_widget span3">
+<!-- 					<div class="first footer_widget span3">
 						<div class="title-wrapper">
 							<h3 class="widget-title">Follow us on twitter!</h3>
 							<div class="clear"></div>
@@ -124,7 +124,7 @@
 								<img width="305" height="305" src="./img/defaults/305x305.jpg" class="attachment-post-thumbnail wp-post-image" alt="2">
 							</a>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="copyright">

@@ -1,6 +1,5 @@
-<div class="container">
-    <h1>BlogController/index</h1>
-    <div class="box">
+<div class="page normal-page container">
+	
 
         <!-- echo out the system feedback (error and success messages) -->
         <?php $this->renderFeedbackMessages(); ?>
@@ -30,4 +29,5 @@
             
         </div>
     </div>
+</div>
 </div>
