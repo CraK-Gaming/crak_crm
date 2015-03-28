@@ -19,6 +19,8 @@
 					<div>
 						<?= $blog_post->description; ?>
 					</div>
+					
+					Author: <a href=''><?= $blog_post->user_name ?></a>
 			
 				<div style="background-color:red; height:10px;">
 					
