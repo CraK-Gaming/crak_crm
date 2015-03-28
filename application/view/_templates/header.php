@@ -69,13 +69,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
-        <title>Game addict | Home</title>
+        <title>CraK - Addicted to Gaming</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="keywords" content="">
         <link rel="shortcut icon" href="<?php echo Config::get('URL'); ?>img/favicon.png">
         <!-- CSS -->
         <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>style.css">
+		
         
         <link rel="stylesheet" id="custom-style-css"  href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800,800italic" type="text/css" media="all" />
     </head>
@@ -110,7 +111,7 @@
                     <div class="nav-collapse collapse">
                         <div class="menu-main-container">
                             <ul class="nav">
-                                <li class="dropdown current-menu-parent">
+                                <!--<li class="dropdown current-menu-parent">
                                     <a href="index.html" data-toggle="dropdown" class="dropdown-toggle">Home</a>
                                     <ul class="sub-menu dropdown-menu">
                                         <li><a href="index-portfolio.html">Portfolio version</a></li>
@@ -118,6 +119,7 @@
                                         <li><a href="index-blog.html">Blog roll version</a></li>
                                     </ul>
                                 </li>
+								
                                 <li class="dropdown current-menu-parent">
                                     <a href="#">Features</a>
                                     <ul class="sub-menu dropdown-menu">
@@ -162,7 +164,14 @@
                                         <li><a href="blog-full-width.html">Blog Full Width</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact.html">Contact</a></li>-->
+								
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Teams</a></li>
+								<li><a href="#">Gallery</a></li>
+								<li><a href="#">Forum</a></li>
+								<li><a href="#">Contact</a></li>
                             </ul>
                         </div>
                         <a href="#myModalL" role="button" data-toggle="modal" class="account"><i class="fa fa-user"></i></a>

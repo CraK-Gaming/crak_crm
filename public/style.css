@@ -12,6 +12,7 @@ Text Domain: addict
 */
 @import url('css/bootstrap.css');
 @import url('css/main.css');
+@import url('css/background3.css');		/* Added to get the green theme */
 @import url('css/bootstrap-responsive.css');
 @import url('css/bbpress.css');
 @import url('css/woocommerce.css');

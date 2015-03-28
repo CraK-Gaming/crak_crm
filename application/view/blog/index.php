@@ -72,43 +72,80 @@
 														<a href="#all" title="All">All</a>
 														<div class="clear"></div>
 													</li>
-													<li>
-														<a href="#game-2" title="Battlefield 4">BF4</a>
-														<div class="clear"></div>
-													</li>
-													<li>
-														<a href="#game-1" title="Counter Strike: Global Offensive">CS:GO</a>
-														<div class="clear"></div>
-													</li>
-													<li>
-														<a href="#game-3" title="Dota 2">Dota 2</a>
-														<div class="clear"></div>
-													</li>
-													<li>
-														<a href="#game-4" title="League of Legends">LoL</a>
-														<div class="clear"></div>
-													</li>
+													<?php foreach ($this->games as $game) { ?>
+														
+														<li>
+															<a href="#game-<?= $game->game_id; ?>" title="<?= $game->name; ?>"><?= $game->name; ?></a>
+															<div class="clear"></div>
+														</li>
+													<?php } ?>
 												</ul>
 												<div class="clear"></div>
 											</li>
-											<li class="clanwar-item game-1 game-2  game-4"> <!-- Hierdie verwys na die href bo -->
-												<a href="#" title="Pro league semifinal">
-													<div class="wrap">
-														<div class="upcoming">TEST</div>
-														<div class="match-wrap">
-															<img src="./img/defaults/25x25.jpg" class="clan1img">
-															<!--<div class="home-team"></div>-->
-															<span class="vs">vs.</span>
-															<div class="opponent-team">
-																Aliance
+											<?php foreach ($this->matches as $match) { ?>
+												<li class="clanwar-item game-<?= $match->game_id; ?>">
+													<a href="#" title="<?= $match->tournament_name; ?>">
+														<div class="wrap">
+														
+															<!--<div class="upcoming"><?= $match->score; ?></div>-->
+															<div class="
+															<?php
+																switch ($match->match_status_id) {
+																	case 1:		// Scheduled
+																		echo 'upcoming';
+																		break;
+																	case 2:		// Cancelled - Should not reach this point
+																		echo '';
+																		break;
+																	case 3:		// Win
+																		echo 'scores win';
+																		break;
+																	case 4:		// Loss
+																		echo 'scores loose';
+																		break;
+																	case 5:		// Scheduled
+																		echo 'upcoming';
+																		break;
+																}
+															?>
+															"><?= $match->score; ?></div>
+															
+															<div class="match-wrap">
+																<!--<img src="./img/defaults/25x25.jpg" class="clan1img">-->
+																<div class="home-team"><?= $match->team_name; ?></div>
+																<span class="vs">vs.</span>
+																<div class="opponent-team">
+																	<?= $match->opponent_name; ?>
+																</div>
+																<div class="clear"></div>
 															</div>
+															<div class="date"><?= $match->game_name; ?> - <?= date("F d, Y, H:i a",strtotime($match->match_date)); ?> </div>
 															<div class="clear"></div>
 														</div>
-														<div class="date">CS:GO - March 1, 2015, 9:12 pm</div>
-														<div class="clear"></div>
+													</a>
+												</li>
+												
+											<?php } ?>
+											
+										</ul>
+									</div>
+								</div>
+								<div class="widget">
+									<div class="title-wrapper">
+										<h3 class="widget-title"> Calendar</h3>
+										<div class="clear"></div>
+									</div>
+									<div class="wcontainer">
+										<ul class="review">
+											<?php foreach ($this->events as $event) { ?>
+												<li>
+													<div class="info">
+														<a href="#"><?= $event->title; ?></a><br>
+														<i class="icon-calendar"></i> <?= date("F d, Y, H:i a",strtotime($match->match_date)); ?><br>
 													</div>
-												</a>
-											</li>
+													<div class="clear"></div>
+												</li>
+											<?php } ?>
 										</ul>
 									</div>
 								</div>
@@ -119,25 +156,19 @@
 									</div>
 									<div class="wcontainer">
 										<div class="textwidget">
-											<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fthemeforest&width=330&height=290&colorscheme=light&show_faces=true&header=true&stream=false&show_border=true&appId=178829182171244" style="border:none; overflow:hidden; width:100%; height:290px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+											<div id="fb-root"></div>
+											<script>(function(d, s, id) {
+											  var js, fjs = d.getElementsByTagName(s)[0];
+											  if (d.getElementById(id)) return;
+											  js = d.createElement(s); js.id = id;
+											  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
+											  fjs.parentNode.insertBefore(js, fjs);
+											}(document, 'script', 'facebook-jssdk'));</script>
+
+											<div class="fb-page" data-href="https://www.facebook.com/CraKza" data-width="330" data-height="290" data-hide-cover="true" data-show-facepile="true" data-show-posts="false"></div>
+										
+											<!--<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fthemeforest&width=330&height=290&colorscheme=light&show_faces=true&header=true&stream=false&show_border=true&appId=178829182171244" style="border:none; overflow:hidden; width:100%; height:290px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>-->
 										</div>
-									</div>
-								</div>
-								<div class="widget">
-									<div class="title-wrapper">
-										<h3 class="widget-title"> Calendar</h3>
-										<div class="clear"></div>
-									</div>
-									<div class="wcontainer">
-										<ul class="review">
-											<li>
-												<div class="info">
-													<a href="#">Eget ultrices mauris rhoncus non</a><br>
-													<i class="icon-calendar"></i> May 4, 2013<br>
-												</div>
-												<div class="clear"></div>
-											</li>
-										</ul>
 									</div>
 								</div>
 							</div>
