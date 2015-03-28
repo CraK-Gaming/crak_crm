@@ -86,30 +86,6 @@
 												<li class="clanwar-item game-<?= $match->game_id; ?>">
 													<a href="#" title="<?= $match->tournament_name; ?>">
 														<div class="wrap">
-														
-															<!--<div class="upcoming"><?= $match->score; ?></div>-->
-															<div class="
-															<?php
-																switch ($match->match_status_id) {
-																	case 1:		// Scheduled
-																		echo 'upcoming';
-																		break;
-																	case 2:		// Cancelled - Should not reach this point
-																		echo '';
-																		break;
-																	case 3:		// Win
-																		echo 'scores win';
-																		break;
-																	case 4:		// Loss
-																		echo 'scores loose';
-																		break;
-																	case 5:		// Scheduled
-																		echo 'upcoming';
-																		break;
-																}
-															?>
-															"><?= $match->score; ?></div>
-															
 															<div class="match-wrap">
 																<!--<img src="./img/defaults/25x25.jpg" class="clan1img">-->
 																<div class="home-team"><?= $match->team_name; ?></div>
@@ -220,7 +196,6 @@
 										</ul>
 									</div>
 								</div>
-								<div class="widget">
 								<div class="widget">
 									<div class="title-wrapper">
 										<h3 class="widget-title">Find us on facebook!</h3>
