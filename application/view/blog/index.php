@@ -13,7 +13,7 @@
 				
 					<h3><?= $blog_post->title; ?></h3>
 					
-					<?= date("F d, Y",strtotime($blog_post->created_on)); ?>
+					<?= date("d M",strtotime($blog_post->created_on)); ?>
 					<br /><br />
 					
 					<div>
