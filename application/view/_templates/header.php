@@ -69,18 +69,20 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
-        <title>Game addict | Unleash your passion</title>
+        <title>Game addict | Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="keywords" content="">
         <link rel="shortcut icon" href="<?php echo Config::get('URL'); ?>img/favicon.png">
         <!-- CSS -->
         <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>style.css">
+        
         <link rel="stylesheet" id="custom-style-css"  href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800,800italic" type="text/css" media="all" />
     </head>
     <body class="home page page-id-26 page-template page-template-tmp-no-title-php">
         <div id="main_wrapper">
-        <div class="container logo">
+        <div class="logo">
+        <div class="container">
             <!-- Logo -->
             <a class="brand" href="index.html">
             <img src="<?php echo Config::get('URL'); ?>img/logo.png" alt="logo"  />
@@ -88,21 +90,17 @@
             <!-- End Logo -->
             <!-- Social logos -->
             <div class="social">
-                <a data-original-title="Rss" data-toggle="tooltip" class="rss" target="_blank" href=""><i class="fa fa-rss"></i> </a>
-                <a data-original-title="Dribbble" data-toggle="tooltip" class="dribbble" target="_blank" href=""><i class="fa fa-dribbble"></i> </a>
-                <a data-original-title="Vimeo" data-toggle="tooltip" class="vimeo" target="_blank" href=""><i class="fa fa-vimeo-square"></i> </a>
                 <a data-original-title="Youtube" data-toggle="tooltip" class="youtube" target="_blank" href=""><i class="fa fa-youtube"></i> </a>
-                <a data-original-title="Twitch" data-toggle="tooltip" class="twitch" target="_blank" href=""><i class="fa fa-gamepad"></i></a>
-                <a data-original-title="Linked in" data-toggle="tooltip" class="linked-in" target="_blank" href=""><i class="fa fa-linkedin"></i> </a>
-                <a data-original-title="Google plus" data-toggle="tooltip" class="google-plus" target="_blank" href=""><i class="fa fa-google-plus"></i></a>
-                <a data-original-title="Twitter" data-toggle="tooltip" class="twitter" target="_blank" href=""><i class="fa fa-twitter"></i></a>
+                <a data-original-title="Steam" data-toggle="tooltip" class="steam" target="_blank" href=""><i class="fa fa-steam"></i></a>
                 <a data-original-title="Facebook" data-toggle="tooltip" class="facebook" target="_blank" href=""><i class="fa fa-facebook"></i></a>
             </div>
             <!-- End Social logos -->
             <div class="clear"></div>
+            </div>
         </div>
         <!-- NAVBAR -->
-        <div class="navbar navbar-inverse container">
+        <div class="navbar navbar-inverse">
+        <div class="container">
                 <div class="navbar-inner">
                     <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                     <span class="icon-bar"></span>
@@ -177,6 +175,7 @@
                     <!--/.nav-collapse -->
                 </div>
                 <!-- /.navbar-inner -->
+            </div>
             </div>
         <div id="myModalL" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-header">
