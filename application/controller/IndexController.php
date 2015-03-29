@@ -20,7 +20,7 @@ class IndexController extends Controller
 		
 		$this->View->render('blog/index', array(
             'blog_posts' => BlogModel::getLatestNews(),
-			'recent_matches' => MatchModel::getRecentMatches(),
+			'recent_matches' => MatchModel::getRecentMatches(5),
 			'upcoming_matches' => MatchModel::getUpcomingMatches(),
 			'games' => GameModel::getGames(),
 			'events' => EventModel::getUpcomingEvents()

@@ -1,17 +1,14 @@
 <?php
 
-class EventModel
+class MatchStatusModel
 {
-    public static function getUpcomingEvents()
+    public static function getAllMatchStatuses()
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
         $sql = "
-			SELECT event_id, event_date, title, description
-			FROM events
-			WHERE event_date >= CURDATE() AND
-				is_deleted = 0
-			ORDER BY event_date
+			SELECT match_status_id, status
+			FROM match_status
 		";
 		
         $query = $database->prepare($sql);
