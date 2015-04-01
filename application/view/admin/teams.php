@@ -4,6 +4,8 @@
 
 		Teams
 		
+		<a href='../AddTeam/'>Add New Team</a>
+		
 		<?php if ($this->teams) { ?>
             <table border='1' width='100%'>
                 <thead>

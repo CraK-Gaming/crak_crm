@@ -4,7 +4,7 @@
 
 		Games
 		
-		<a href='AddGame/'>Add New Game</a>
+		<a href='../AddGame/'>Add New Game</a>
 		
 		<?php if ($this->games) { ?>
             <table border='1' width='100%'>

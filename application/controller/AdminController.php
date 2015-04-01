@@ -73,6 +73,22 @@ class AdminController extends Controller
         ));
     }
 	
+	public function addTeam()
+	{
+		$this->View->render('admin/addteam', array(
+            'games' => GameModel::getGames()
+        ));
+	}
+	
+	public function addTeamSave()
+    {
+        TeamModel::addTeam(
+			Request::post('team_name'),
+			Request::post('game_id')
+		);
+        Redirect::to('admin/teams');
+    }
+	
 	public function deleteTeam($team_id)
 	{
 		TeamModel::deleteTeam($team_id);

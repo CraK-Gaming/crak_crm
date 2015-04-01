@@ -46,6 +46,32 @@ class TeamModel
         Session::add('feedback_negative', 'Error saving team');
         return false;
     }
+	
+	public static function addTeam($team_name, $game_id)
+    {
+        if (!$team_name)
+            return false;
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "
+			INSERT INTO teams (name, game_id)
+			VALUES (:team_name, :game_id)
+		";
+        $query = $database->prepare($sql);
+        $query->execute(
+			array(
+				':team_name' => $team_name,
+				':game_id' => $game_id
+			)
+		);
+
+        if ($query->rowCount() == 1)
+            return true;
+
+        Session::add('feedback_negative', 'Error saving team');
+        return false;
+    }
 
 	public static function deleteTeam($team_id)
     {
