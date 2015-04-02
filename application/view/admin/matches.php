@@ -24,7 +24,7 @@
 							<td><?= $match->tournament_name; ?></td>
 							<td><?= $match->score; ?></td>
 							<td><?= $match->match_status_name; ?></td>
-                            <td> 
+                            <td>
 								<a href="<?= Config::get('URL') . 'Admin/DeleteMatch/' . $match->match_id; ?>">Delete</a>
 							</td>
                         </tr>

@@ -21,6 +21,7 @@
 							<td><a href="<?= Config::get('URL') . 'Admin/EditTeam/' . $team->team_id; ?>"><?= $team->team_name; ?></a></td>
 							<td><?= $team->game_name; ?></td>
                             <td> 
+								<a href="<?= Config::get('URL') . 'Admin/TeamManagers/' . $team->team_id; ?>">Managers</a> | 
 								<a href="<?= Config::get('URL') . 'Admin/DeleteTeam/' . $team->team_id; ?>">Delete</a>
 							</td>
                         </tr>
